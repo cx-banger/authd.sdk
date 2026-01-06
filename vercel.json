@@ -1,14 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/**/*.php": {
+    "*.php": {
       "runtime": "vercel-php@0.7.5",
       "maxDuration": 30
     }
   },
   "routes": [
     {
-      "src": "/(.*\\.(?:css|js|gif|jpg|jpeg|png|svg|ico|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(css|js|gif|jpg|jpeg|png|svg|ico|woff|woff2|ttf|eot))",
       "dest": "/$1"
     },
     {
@@ -19,8 +19,5 @@
       "src": "/(login|logout|upload)\\.php",
       "dest": "/$1.php"
     }
-  ],
-  "env": {
-    "PHP_VERSION": "8.2"
-  }
+  ]
 }
